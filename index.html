@@ -63,6 +63,46 @@
         .brand-logo:hover {
             transform: scale(1.05);
         }
+        /* --- Aligned Social Media Elements --- */
+        .header-socials {
+            position: absolute;
+            right: 10px; /* Anchored to the right side of the container */
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .social-icon-link {
+            display: inline-flex;
+            text-decoration: none;
+            color: var(--primary-color);
+            opacity: 0.8;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .social-icon-link:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        .social-icon-link svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* Stack layout cleanly on very narrow screens */
+        @media (max-width: 576px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .header-socials {
+                position: static;
+                margin-top: 5px;
+            }
+        }
+        /* --- Layout Container --- */
 
         .container {
             max-width: 1200px;
@@ -296,8 +336,24 @@
     </style>
 </head>
 <body>
-    <header class="brand-header">
-        <img class="brand-logo" src="images/logo.png" alt="Brand Logo">
+   <header class="site-header">
+        <div class="nav-container">
+            <a href="#" class="brand-logo-link">
+                <img class="brand-logo" src="E:\fashion\earing Brand\images\logo.png" alt="Website Logo">
+            </a>
+
+            <div class="header-socials">
+                <a href="https://www.instagram.com/lamiicon?igsh=OGZqZnl4dnF3bW5n" target="_blank" class="social-icon-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/share/1EBV2meb3T/" target="_blank" class="social-icon-link" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@lamiicon?_r=1&_t=ZS-972oTCTWaOW" target="_blank" class="social-icon-link" aria-label="TikTok">
+                    <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.05 1.63 4.2 1.08 1.12 2.53 1.77 4.12 2v3.83c-1.57-.05-3.1-.53-4.41-1.44-.13-.09-.23-.13-.4-.02v7.17c.05 1.7-.42 3.42-1.42 4.77-1.32 1.71-3.4 2.65-5.54 2.55-2.28-.02-4.5-1.15-5.71-3.09-1.44-2.18-1.55-5.14-.3-7.43 1.15-2.14 3.5-3.51 5.92-3.53.07 0 .14 0 .21.01v3.88c-1.01-.01-2.04.35-2.76 1.07-.84.77-1.19 1.98-1 3.1.2 1.25 1.24 2.28 2.5 2.46 1.46.25 2.97-.6 3.42-2 .24-.62.29-1.3.28-1.96V.02z"/></svg>
+                </a>
+            </div>
+        </div>
     </header>
     <div class="container">
         
