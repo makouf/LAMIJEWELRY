@@ -28,6 +28,41 @@
             line-height: 1.6;
             padding: 40px 20px;
         }
+        /* --- Website Header Navigation --- */
+        .site-header {
+            width: 100%;
+            background-color: transparent;
+            border-bottom: 1px solid rgba(203, 181, 148, 0.3); /* Soft subtle divider */
+            padding: 20px 0;
+            margin-bottom: 40px;
+            text-align: center; /* Ensures strict centering for inline elements */
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: block; /* Simplifies layout to guarantee exact center positioning */
+            text-align: center;
+        }
+
+        .brand-logo-link {
+            display: inline-block;
+            text-decoration: none;
+            margin: 0 auto;
+        }
+
+        .brand-logo {
+            height: 130px; /* Compact website logo height */
+            width: auto;
+            display: block;
+            margin: 0 auto; /* Forces strict horizontal block centering */
+            mix-blend-mode: multiply; /* Blends white/transparent background perfectly */
+            transition: transform 0.2s ease;
+        }
+
+        .brand-logo:hover {
+            transform: scale(1.05);
+        }
 
         .container {
             max-width: 1200px;
@@ -261,7 +296,9 @@
     </style>
 </head>
 <body>
-
+    <header class="brand-header">
+        <img class="brand-logo" src="E:\fashion\earing Brand\images\logo.png" alt="Brand Logo">
+    </header>
     <div class="container">
         
         <section class="lookbook-grid">
